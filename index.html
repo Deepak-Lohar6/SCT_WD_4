@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Organize & Achieve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="brand">
+            <div class="brand-logo">✓</div>
+            <div>
+                <h1 class="brand-name">TaskFlow</h1>
+                <p class="brand-tagline">Organize & Achieve</p>
+            </div>
+        </div>
+        <button id="themeToggle" class="mode-toggle-btn" aria-label="Toggle Theme">
+            <span id="themeIcon">☀️</span>
+        </button>
+    </header>
+
+    <main class="main-container">
+
+        <section class="stats-grid">
+            <article class="stat-card blue-card">
+                <div class="stat-info">
+                    <span class="stat-label">Total Tasks</span>
+                    <h2 id="totalTasks" class="stat-value">0</h2>
+                </div>
+                <div class="stat-icon">📋</div>
+            </article>
+
+            <article class="stat-card green-card">
+                <div class="stat-info">
+                    <span class="stat-label">Completed</span>
+                    <h2 id="completedTasks" class="stat-value">0</h2>
+                </div>
+                <div class="stat-icon">✅</div>
+            </article>
+
+            <article class="stat-card orange-card">
+                <div class="stat-info">
+                    <span class="stat-label">In Progress</span>
+                    <h2 id="pendingTasks" class="stat-value">0</h2>
+                </div>
+                <div class="stat-icon">⏳</div>
+            </article>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-meta">
+                <span>Progress</span>
+                <span id="progressPercent" class="progress-value">0%</span>
+            </div>
+            <div class="progress-track">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+        </section>
+
+        <section class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter your task here..." autocomplete="off">
+            <select id="taskCategory">
+                <option value="Work">💼 Work</option>
+                <option value="Study">📚 Study</option>
+                <option value="Personal">🏠 Personal</option>
+                <option value="Health">❤️ Health</option>
+                <option value="Other">⭐ Other</option>
+            </select>
+            <button id="addTaskBtn" class="add-btn">➕ Add Task</button>
+        </section>
+
+        <section class="search-section">
+            <input type="text" id="searchTask" placeholder="🔍 Search tasks...">
+        </section>
+
+        <section id="taskList" class="task-grid"></section>
+
+        <section id="emptyState" class="empty-state">
+            <div class="empty-icon">📌</div>
+            <h3>No Tasks Yet</h3>
+            <p>Add a new task above to get started.</p>
+        </section>
+
+    </main>
+
+    <div id="popup" class="toast"></div>
+
+    <footer class="app-footer">
+        <p>Designed by <strong>Deepak Lohar</strong></p>
+        <p class="sub-footer">SkillCraft Technology Web Development Internship</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
